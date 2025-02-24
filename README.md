@@ -114,6 +114,48 @@
     </section>
   </div>
 
+  <script>
+    // 1. Alert Me Section
+    function alertName() {
+      const nameValue = document.getElementById('nameInput').value;
+      if (nameValue) {
+        alert("Hi " + nameValue + "!");
+      }
+    }
+
+    // 2. Change Color Section
+    // Default background is #ADD8E6, but the toggle is between #ADD8E6 and green.
+    let isTeal = true;
+
+    function changeColor() {
+      if (isTeal) {
+        document.body.style.backgroundColor = "green";
+      } else {
+        document.body.style.backgroundColor = "#ADD8E6";
+      }
+      isTeal = !isTeal;
+    }
+
+    // 3. Text Tester Section
+    function validateText() {
+      const textValue = document.getElementById('textInput').value;
+      const validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+      if (validation.test(textValue)) {
+        alert("The text contains special characters!");
+      } else {
+        alert("The text is valid!");
+      }
+    }
+
+    // 4. Add Text Section
+    function addText() {
+      const heading = document.getElementById('pageHeading');
+      heading.textContent += " Add Text";
+    }
+  </script>
+</body>
+</html>
+
 
 
 # Comments: 
